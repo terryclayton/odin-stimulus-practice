@@ -1,0 +1,65 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<%# <div data-controller="hello">
+
+</div> %>
+First toggle exercise: get it working.<br>
+<div data-controller="toggle"
+  data-toggle-primary-class="text-primary">
+  <div data-toggle-target="button" class="hideable">Peekaboo</div>
+  <button class="btn" data-action="toggle#clicked">
+    Toggle
+  </button>
+</div>
+
+<br>
+
+Second toggle exercise: show a dropdown menu. <br>
+<div data-controller="toggle"
+  data-toggle-primary-class="text-primary">
+  <div data-toggle-target="button" class="hideable">
+    <a href="#">Link 1</a><br>
+    <a href="#">Link 2</a><br>
+    <a href="#">Link 3</a><br>
+  </div>
+  <button class="btn" data-action="toggle#clicked">
+    Toggle
+  </button>
+</div>
+
+<br>
+
+Third toggle exercise: hide the clicked element and show another. <br>
+<div data-controller="toggle"
+  data-toggle-primary-class="text-primary">
+  <div data-toggle-target="button" class="hideable">
+    <a href="#">Link 1</a><br>
+    <a href="#">Link 2</a><br>
+    <a href="#">Link 3</a><br>
+  </div>
+  <button class="hideable" data-toggle-target="button2" data-action="toggle#clicked">
+    Toggle
+  </button>
+</div>
+
+<br>
+
+Fourth toggle exercise: Clicking a checkbox will highlight the element containing the checkbox. <br>
+<div data-controller="toggle"
+  data-toggle-primary-class="text-primary">
+  <div class="highlight" data-toggle-target="button2">
+  <input type="checkbox" data-action="toggle#clicked">
+    Toggle
+  </button>
+  </div>
+</div>
+
+<br>
+
+Fifth toggle exercise: Write a controller for text inputs with a limited length. Warn a user when they are close or over the maximum character count (imagine a user writing a post which has a maximum length of 280 characters)
+
+<div data-controller="text-counter" data-text-counter-max-value="280">
+  <textarea data-text-counter-target="input" data-action="text-counter#input"></textarea>
+  <div data-text-counter-target="output"></div>
+</div>
